@@ -1,8 +1,6 @@
 FROM node:12
 
-RUN mkdir -p /opt/node-server
-COPY . /opt/node-server
-WORKDIR /opt/node-server
+WORKDIR .
 
 RUN npm install
 

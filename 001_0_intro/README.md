@@ -50,3 +50,11 @@ Deploy to Kubernetes
 1. We now are going to use this app and run 5 replicas or copies in parallel
 2. We are going to load balance these using a service in a round robin manner
 3. We then expose it to the outside world
+
+When we now send requests from our browser we see that everytime it hits a different container
+
+# Understanding what is involved
+As we said earlier, there are primary four steps involved in developing and deploying the applications
+1) Step 1 - Application Development - Here we use NodeJS to write a simple application which replies back to HTTP requests
+2) Step 2 - Continuous Integration - We skipped this part to keep things simple
+3) Step 3 - Packaging Application - We have docker here 
