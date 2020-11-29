@@ -57,4 +57,17 @@ When we now send requests from our browser we see that everytime it hits a diffe
 As we said earlier, there are primary four steps involved in developing and deploying the applications
 1) Step 1 - Application Development - Here we use NodeJS to write a simple application which replies back to HTTP requests
 2) Step 2 - Continuous Integration - We skipped this part to keep things simple
-3) Step 3 - Packaging Application - We have docker here 
+3) Step 3 - Packaging Application - We have docker here. Dockerfile within the directory tells how to package the app.
+This is how the docker file looks like
+
+```dockerfile
+FROM node:12
+
+COPY . .
+WORKDIR .
+
+RUN npm install
+ENTRYPOINT ["npm", "start"]
+``` 
+
+We use this docker file to build an image 

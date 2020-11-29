@@ -4,5 +4,4 @@ COPY . .
 WORKDIR .
 
 RUN npm install
-
 ENTRYPOINT ["npm", "start"]
