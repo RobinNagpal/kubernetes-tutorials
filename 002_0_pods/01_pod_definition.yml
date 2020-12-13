@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: node-app-pod
+  labels:
+    app: node-app
+spec:
+  containers:
+    - name: node-app
+      image: robinnagpal/kubernetes-tutorial-002-pods:latest
