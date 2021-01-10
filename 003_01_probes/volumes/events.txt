@@ -1,0 +1,17 @@
+Events:
+  Type     Reason     Age                  From               Message
+  ----     ------     ----                 ----               -------
+  Normal   Scheduled  2m45s                default-scheduler  Successfully assigned default/node-app-pod to minikube
+  Normal   Pulled     2m29s                kubelet            Successfully pulled image "robinnagpal/kubernetes-tutorial-003-01-probes:latest" in 15.522543474s
+  Normal   Pulled     85s                  kubelet            Successfully pulled image "robinnagpal/kubernetes-tutorial-003-01-probes:latest" in 898.742558ms
+  Normal   Killing    14s (x2 over 86s)    kubelet            Container node-app failed startup probe, will be restarted
+  Normal   Pulling    14s (x3 over 2m45s)  kubelet            Pulling image "robinnagpal/kubernetes-tutorial-003-01-probes:latest"
+  Normal   Created    13s (x3 over 2m29s)  kubelet            Created container node-app
+  Normal   Started    13s (x3 over 2m29s)  kubelet            Started container node-app
+  Normal   Pulled     13s                  kubelet            Successfully pulled image "robinnagpal/kubernetes-tutorial-003-01-probes:latest" in 993.657498ms
+  Warning  Unhealthy  8s (x5 over 2m23s)   kubelet            Startup probe failed: HTTP probe failed with statuscode: 500
+  Normal   Killing    29s (x3 over 2m49s)  kubelet            Container node-app failed startup probe, will be restarted
+  Normal   Pulling    29s (x4 over 4m8s)   kubelet            Pulling image "robinnagpal/kubernetes-tutorial-003-01-probes:latest"
+  Normal   Created    28s (x4 over 3m52s)  kubelet            Created container node-app
+  Normal   Started    28s (x4 over 3m52s)  kubelet            Started container node-app
+  Normal   Pulled     28s                  kubelet            Successfully pulled image "robinnagpal/kubernetes-tutorial-003-01-probes:latest" in 973.237924ms

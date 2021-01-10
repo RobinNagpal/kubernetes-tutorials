@@ -9,7 +9,7 @@ const server = createServer((request: IncomingMessage, response: ServerResponse)
     case "/node-app": {
       if (request.method === "GET") {
         counter = counter + 1;
-        if (counter / 4 === 0) {
+        if (counter % 4 === 0) {
           process.exit(1);
         }
         response.setHeader("Connection", "close");

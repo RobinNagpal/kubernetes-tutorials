@@ -8,3 +8,4 @@ spec:
   containers:
     - name: node-app
       image: robinnagpal/kubernetes-tutorial-002-pods:latest
+      imagePullPolicy: Always

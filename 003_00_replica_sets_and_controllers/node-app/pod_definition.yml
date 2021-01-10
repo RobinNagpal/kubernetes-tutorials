@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: node-app-pod
+  labels:
+    app: node-app
+spec:
+  containers:
+    - name: node-app
+      image: robinnagpal/kubernetes-tutorial-003-node-app:latest
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: node-app-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: node-app
+  ports:
+    - port: 80
+      targetPort: 3000
+      nodePort: 30464
+  sessionAffinity: None
+  sessionAffinityConfig:
+    clientIP:
+      timeoutSeconds: 1
