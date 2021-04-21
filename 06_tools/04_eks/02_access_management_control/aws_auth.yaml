@@ -8,19 +8,19 @@ data:
     - groups:
       - system:bootstrappers
       - system:nodes
-      rolearn: arn:aws:iam::617960797257:role/eksctl-robin-personal-cluster-nod-NodeInstanceRole-TUKH4Z187ANC
+      rolearn: arn:aws:iam::00000000000:role/eksctl-robin-personal-cluster-nod-NodeInstanceRole-TUKH4Z187ANC
       username: system:node:{{EC2PrivateDNSName}}
     - groups:
       - system:bootstrappers
       - system:nodes
-      rolearn: arn:aws:iam::617960797257:role/eksctl-robin-personal-cluster-nod-NodeInstanceRole-2RY0KK33CGIG
+      rolearn: arn:aws:iam::00000000000:role/eksctl-robin-personal-cluster-nod-NodeInstanceRole-2RY0KK33CGIG
       username: system:node:{{EC2PrivateDNSName}}
   mapUsers: |
-    - userarn: arn:aws:iam::617960797257:user/eks-trainee
+    - userarn: arn:aws:iam::00000000000:user/eks-trainee
       username: eks-trainee
-    - userarn: arn:aws:iam::617960797257:user/eks-developer
+    - userarn: arn:aws:iam::00000000000:user/eks-developer
       username: eks-developer
-    - userarn: arn:aws:iam::617960797257:user/eks-super-admin
+    - userarn: arn:aws:iam::00000000000:user/eks-super-admin
       groups:
       - system:masters
       username: eks-super-admin
