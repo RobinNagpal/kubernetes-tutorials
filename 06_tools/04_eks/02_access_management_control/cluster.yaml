@@ -1,0 +1,20 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: robin-personal-cluster
+  region: us-east-2
+
+nodeGroups:
+  - name: ng-1
+    instanceType: t2.small
+    desiredCapacity: 2
+    volumeSize: 80
+    ssh:
+      allow: true
+  - name: ng-2
+    instanceType: t2.small
+    desiredCapacity: 2
+    volumeSize: 80
+    ssh:
+      allow: true

@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: aws-auth
+  namespace: kube-system
+data:
+  mapRoles: |
+    - groups:
+      - system:bootstrappers
+      - system:nodes
+      - system:node-proxier
+      rolearn: arn:aws:iam::250327115872:role/eksctl-robin-personal-clus-FargatePodExecutionRole-1PQBJCBK5RR92
+      username: system:node:{{SessionName}}
+  mapUsers: |
+    - userarn: arn:aws:iam::250327115872:user/robin-aws
+      username: robin-aws
+      groups:
+        - system:masters
+        - system:discovery
+    - userarn: arn:aws:iam::250327115872:user/robin-aws
+      username: robin-aws
+      groups:
+        - system:masters
+        - system:discovery

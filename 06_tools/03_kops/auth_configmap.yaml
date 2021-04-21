@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  namespace: kube-system
+  name: aws-iam-authenticator
+  labels:
+    k8s-app: aws-iam-authenticator
+data:
+  config.yaml: |
+    clusterID: kops.jomo.click
+    server:
+      mapRoles:
+      - roleARN: arn:aws:iam::617960797257:role/kubernetes_viewer
+        username: kubernetes_viewer
+        groups:
+        - kubernetes_viewer
+      mapUsers:
+      - userARN: arn:aws:iam::617960797257:user/kops-trainee-1
+        username: kops-trainee-1
+        groups:
+        - system:masters
+      mapAccounts: |
+        - "617960797257"

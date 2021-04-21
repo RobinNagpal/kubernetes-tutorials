@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: node-app-pod
+  labels:
+    app: node-app
+spec:
+  containers:
+    - name: node-app
+      image: nginx
+      imagePullPolicy: Always

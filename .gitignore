@@ -6,6 +6,16 @@ backend/.idea/*
 *.iml
 .gradle/*
 
+*/**/.envrc
+*/**/local_kube_config.yaml
+*/**/local_kube_config.yaml.eksctl.lock
+
+*/**/hidden.csv
+*/**/hidden.txt
+*/**/hidden.md
+*/**/.terraform
+*/**/.terraform.lock.hcl
+
 .DS_Store
 
 /backend/schema*.sql
