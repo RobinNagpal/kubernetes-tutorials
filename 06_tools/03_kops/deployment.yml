@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: backend-deployment
 spec:
-  replicas: 5
+  replicas: 4
   selector:
     matchLabels:
       app: node-app

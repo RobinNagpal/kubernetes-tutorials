@@ -1,0 +1,12 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: kubernetes-readonly-clusterrole-binging
+subjects:
+  - kind: Group
+    name: kubernetes-readonly-users
+    apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: ClusterRole
+  name: kubernetes-readonly-clusterrole
+  apiGroup: rbac.authorization.k8s.io

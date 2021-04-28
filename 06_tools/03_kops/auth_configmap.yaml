@@ -10,14 +10,16 @@ data:
     clusterID: kops.jomo.click
     server:
       mapRoles:
-      - roleARN: arn:aws:iam::617960797257:role/kubernetes_viewer
-        username: kubernetes_viewer
+      - roleARN: arn:aws:iam::617960797257:role/kubernetes_readonly_users_role
+        username: kubernetes_readonly_users_role
         groups:
-        - kubernetes_viewer
+        - kubernetes-readonly-users
       mapUsers:
-      - userARN: arn:aws:iam::617960797257:user/kops-trainee-1
-        username: kops-trainee-1
+      - userARN: arn:aws:iam::617960797257:user/tf-test-developers1
+        username: tf-test-developers1
         groups:
         - system:masters
-      mapAccounts: |
-        - "617960797257"
+      - userARN: arn:aws:iam::617960797257:user/robin-kops-aws-test
+        username: robin-kops-aws-test
+        groups:
+        - system:masters
