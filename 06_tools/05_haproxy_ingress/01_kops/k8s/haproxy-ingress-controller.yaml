@@ -204,6 +204,7 @@ metadata:
   namespace: haproxy-controller
   annotations:
     service.beta.kubernetes.io/aws-load-balancer-type: "nlb"
+    dns.alpha.kubernetes.io/external: foo.jomo.click, bar.jomo.click
 spec:
   selector:
     run: haproxy-ingress

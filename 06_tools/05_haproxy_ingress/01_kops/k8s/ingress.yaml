@@ -4,13 +4,23 @@ metadata:
   name: simple-ingress
 spec:
   rules:
-    - host: api.jomo.click
+    - host: foo.jomo.click
       http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: node-app-service
+                name: foo-app-service
+                port:
+                  number: 3000
+    - host: bar.jomo.click
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: bar-app-service
                 port:
                   number: 3000
