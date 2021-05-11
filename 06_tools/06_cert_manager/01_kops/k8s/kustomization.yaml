@@ -1,0 +1,5 @@
+resources:
+  - 01-foo-deployment.yml
+  - 02-bar-deployment.yml
+  - haproxy-ingress-controller.yaml
+  - ingress.yaml

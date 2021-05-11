@@ -10,6 +10,9 @@ spec:
       type: Public
   awsLoadBalancerController:
     enabled: true
+  certManager:
+    enabled: true
+#    defaultIssuer: SelfSigned
   authorization:
     rbac: {}
   channel: stable

@@ -90,8 +90,13 @@ data "aws_iam_policy_document" "cert_manager_assume_role_policy" {
   }
 }
 
+resource "aws_iam_policy" "cert_manager_assume_role_policy" {
+  name = "cert_manager_role_assume_policy_document"
+  policy = data.aws_iam_policy_document.cert_manager_assume_role_policy.json
+}
+
 resource "aws_iam_user_policy_attachment" "kubernetes_cluster_user_cert_manager_assume" {
-  policy_arn = aws_iam_policy.cert_manager_policy.arn
+  policy_arn = aws_iam_policy.cert_manager_assume_role_policy.arn
   user = data.aws_iam_user.kubernetes_cluster_user.user_name
 }
 

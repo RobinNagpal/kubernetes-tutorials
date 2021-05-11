@@ -24,3 +24,9 @@ spec:
                 name: bar-app-service
                 port:
                   number: 3000
+  tls:
+    - hosts:
+        - foo.jomo.click
+        - bar.jomo.click
+      secretName: tls-keys
+

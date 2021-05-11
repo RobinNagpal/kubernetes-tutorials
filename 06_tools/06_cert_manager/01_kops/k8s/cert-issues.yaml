@@ -1,0 +1,35 @@
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: letsencrypt
+spec:
+  acme:
+    email: admin@jomo.click
+    solvers:
+      - dns01:
+          route53:
+            region: us-east-1
+            role: arn:aws:iam::617960797257:role/cert_manager
+            accessKeyID: AKIAY7YKVOREXDSO4VF2
+            secretAccessKeySecretRef:
+              name: k8s-user-credentials
+              key: secret-access-key
+    privateKeySecretRef:
+      key: ""
+      name: letsencrypt-production
+    server: https://acme-v02.api.letsencrypt.org/directory
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: letsencrypt
+spec:
+  commonName: jomo.click
+  dnsNames:
+    - jomo.click
+    - foo.jomo.click
+    - bar.jomo.click
+  issuerRef:
+    name: letsencrypt
+    kind: ClusterIssuer
+  secretName: tls-keys
