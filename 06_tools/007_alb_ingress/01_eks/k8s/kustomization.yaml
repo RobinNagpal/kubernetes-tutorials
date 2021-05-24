@@ -1,0 +1,4 @@
+resources:
+  - 01-foo-deployment.yml
+  - 02-bar-deployment.yml
+  - ingress.yaml

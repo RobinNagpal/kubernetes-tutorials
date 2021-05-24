@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: foo-backend-deployment
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: foo-app
+  template:
+    metadata:
+      labels:
+        app: foo-app
+    spec:
+      containers:
+        - name: foo-app
+          image: robinnagpal/kubernetes-tutorial-003-node-app:latest
+          env:
+            - name: APP_NAME
+              value: foo
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: foo-app-service
+spec:
+  type: ClusterIP
+  selector:
+    app: foo-app
+  ports:
+    - port: 3000
+      targetPort: 3000

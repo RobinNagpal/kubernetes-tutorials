@@ -30,5 +30,3 @@ tf:
 
 aws_identity:
 	aws sts get-caller-identity
-
-
