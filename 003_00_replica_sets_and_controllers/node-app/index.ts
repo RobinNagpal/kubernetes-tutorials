@@ -19,7 +19,7 @@ const server = createServer((request: IncomingMessage, response: ServerResponse)
       break;
     }
     default: {
-      response.statusCode = 404;
+      response.statusCode = 200;
       response.end("Unknown path");
     }
   }

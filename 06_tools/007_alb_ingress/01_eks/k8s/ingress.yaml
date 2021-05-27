@@ -5,7 +5,7 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/scheme: internet-facing
-    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/target-type: instance
 spec:
   rules:
     - host: foo.jomo.click
@@ -28,7 +28,3 @@ spec:
                 name: bar-app-service
                 port:
                   number: 3000
-  tls:
-    - hosts:
-        - foo.jomo.click
-        - bar.jomo.click

@@ -25,7 +25,7 @@ kind: Service
 metadata:
   name: bar-app-service
 spec:
-  type: ClusterIP
+  type: NodePort
   selector:
     app: bar-app
   ports:
