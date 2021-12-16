@@ -785,7 +785,7 @@ spec:
     spec:
       containers:
       - args:
-        - --cluster-name=robin-personal-cluster
+        - --cluster-name=eks-cluster
         - --ingress-class=alb
         image: amazon/aws-alb-ingress-controller:v2.2.0
         livenessProbe:
